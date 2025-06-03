@@ -1,0 +1,174 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .logo {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: #ffcc00;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.navbar .nav-links li a:hover {
+  color: #ff0033;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(10,10,10,0.9)), url('gta-bg.jpeg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.overlay {
+  z-index: 2;
+  padding: 2rem;
+}
+.hero h1 {
+  font-size: 5rem;
+  color: #ffcc00;
+  font-family: 'Bangers', cursive;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #ddd;
+}
+.cta {
+  display: inline-block;
+  /* background: red; */
+  padding: 0.7rem 1.5rem;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+  border: 1px #fff solid;
+  transition: 0.5s;
+}
+
+.cta:hover {
+    background-color: #fff;
+    color: #000;
+    
+}
+
+.bottom-fade {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, #0a0a0a);
+}
+
+/* Missions */
+.missions {
+  background: #1a1a1a;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.missions h2 {
+  color: #ffcc00;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.mission-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.mission-box {
+  background: #333;
+  padding: 1.5rem;
+  border: 2px solid #ffcc00;
+  font-size: 1.5rem;
+  width: 200px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1s forwards;
+}
+.slide-up { animation-delay: 0.2s; }
+.slide-up.delay-1 { animation-delay: 0.4s; }
+.slide-up.delay-2 { animation-delay: 0.6s; }
+.slide-up.delay-3 { animation-delay: 0.8s; }
+
+/* Story */
+.story {
+  padding: 3rem;
+  background: #111;
+  text-align: center;
+}
+.story h2 {
+  font-size: 2.5rem;
+  color: #ff0033;
+  margin-bottom: 1rem;
+}
+.story p {
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  color: #999;
+  font-family: Arial, sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
