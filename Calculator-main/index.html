@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="calc">
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="AppendToDisplay('/')" class="op">/</button>
+            <button onclick="AppendToDisplay('9')">9</button>
+            <button onclick="AppendToDisplay('8')">8</button>
+            <button onclick="AppendToDisplay('7')">7</button>
+            <button onclick="AppendToDisplay('*')" class="op">*</button>
+            <button onclick="AppendToDisplay('6')">6</button>
+            <button onclick="AppendToDisplay('5')">5</button>
+            <button onclick="AppendToDisplay('4')">4</button>
+            <button onclick="AppendToDisplay('+')" class="op">+</button>
+            <button onclick="AppendToDisplay('3')">3</button>
+            <button onclick="AppendToDisplay('2')">2</button>
+            <button onclick="AppendToDisplay('1')">1</button>
+            <button onclick="AppendToDisplay('-')" class="op">-</button>
+            <button onclick="AppendToDisplay('0')">0</button>
+            <button onclick="AppendToDisplay('.')">.</button>
+            <button onclick="calculate()" class="op">=</button>
+            <button onclick="delast()" class="clear"><i class="fa-solid fa-delete-left"></i></button>
+            <button onclick="cleardis()" class="clear">AC</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
